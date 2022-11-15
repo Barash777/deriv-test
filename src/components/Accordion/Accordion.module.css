@@ -1,6 +1,10 @@
 .accordion {
     /*width: 300px;*/
     /*min-height: 80px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
 }
 
 .btn {
@@ -14,4 +18,15 @@
     border: none;
     outline: none;
     transition: 0.4s;*/
+}
+
+.text {
+    /*overflow: hidden;*/
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.active {
+    max-height: 100vh;
 }

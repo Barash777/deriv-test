@@ -32,7 +32,7 @@
 .Accordion-panel {
   background-color: rosybrown;
   padding: 20px;
-  margin: 20px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   /*justify-content: space-between;*/
