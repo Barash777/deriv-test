@@ -5,13 +5,13 @@
 .App {
   text-align: center;
   display: flex;
-  /*flex-direction: column;*/
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   /*min-height: 100vh;*/
 }
 
-.App-inside {
+.Sub-panel {
   background-color: rosybrown;
   padding: 20px;
   margin: 20px;
@@ -29,3 +29,13 @@
   padding: 5px;
 }
 
+.Accordion-panel {
+  background-color: rosybrown;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+  width: 300px;
+  border-radius: 10px;
+}

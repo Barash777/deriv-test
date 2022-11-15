@@ -15,16 +15,18 @@ function App() {
 
     return (
         <div className="App">
-            <div className="App-inside">
+            <div className="Sub-panel">
                 <input className={'inputValue'} type={'text'}/>
                 <Button name={'Subscribe'} cb={subscribeTicks} />
                 <Button name={'Unsubscribe'} cb={unsubscribeTicks} />
                 {/*<button className={'btn'} onClick={subscribe}>Subscribe</button>*/}
                 {/*<button className={'btn'} onClick={unsubscribe}>Unsubscribe</button>*/}
-                <Accordion name={'test-1'} text={'some text'} />
-                <Accordion name={'test-2'} text={'some text'} />
-                <Accordion name={'test-3'} text={'some text'} />
-                <Accordion name={'test-4'} text={'some text'} />
+            </div>
+            <div className={'Accordion-panel'}>
+                <Accordion name={'btn-1'} text={'some text 1'}/>
+                <Accordion name={'btn-2'} text={'some text 2'}/>
+                <Accordion name={'btn-3'} text={'some text 3 some text 3 some text 3 some text 3'}/>
+                <Accordion name={'btn-4'} text={'some text 4'}/>
             </div>
 
         </div>

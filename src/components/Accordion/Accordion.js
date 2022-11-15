@@ -10,12 +10,12 @@ export const Accordion = ({text, name}) => {
     }
 
     return (
-        <>
-            {/*<button onClick={onButtonClickHandler}>{name}</button>*/}
-            <Button name={name} cb={onButtonClickHandler} />
+        <div className={styles.accordion}>
+            {/*<button className={styles.btn} onClick={onButtonClickHandler}>{name}</button>*/}
+            <Button style={styles.btn} name={name} cb={onButtonClickHandler} />
             {!collapsed && <div className={styles.text}>
                 {text}
             </div>}
-        </>
+        </div>
     );
 };
