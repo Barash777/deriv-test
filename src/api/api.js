@@ -1,11 +1,22 @@
 import DerivAPIBasic from "https://cdn.skypack.dev/@deriv/deriv-api/dist/DerivAPIBasic";
 
 const app_id = 1089; // Replace with your app_id or leave as 1089 for testing.
-const connection = new WebSocket(
+export const connection = new WebSocket(
     `wss://ws.binaryws.com/websockets/v3?app_id=${app_id}`
 );
 const api = new DerivAPIBasic({ connection });
-const tickStream = () => api.subscribe({ ticks: "R_50" });
+const tickStream = () => api.ticks({ ticks: "R_50", subscribe: 1 });
+export const payoutCurrenciesStream = () => api.payoutCurrencies({ payout_currencies: 1 });
+export const ratesStream = (base) => api.exchangeRates({ exchange_rates: 1, base_currency: base });
+
+
+
+
+
+
+// connection.onmessage = (ev) => {
+//     console.log('testFunction, ev.message = ', JSON.parse(ev.data).msg_type)
+// }
 
 const tickResponse = async (res) => {
     const data = JSON.parse(res.data);
@@ -32,6 +43,10 @@ export const unsubscribeTicks = () => {
     console.log('api', api)
     console.log('tickStream()', tickStream())
 };
+
+export const testFunction = () => {
+
+}
 
 // const ticks_button = document.querySelector("#ticks");
 // ticks_button.addEventListener("click", subscribeTicks);
