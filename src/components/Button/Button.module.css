@@ -1,0 +1,17 @@
+.btn {
+    color: black;
+    background: aquamarine;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #5ffdbc;
+}
+
+.btn:active {
+    background: aquamarine;
+}
